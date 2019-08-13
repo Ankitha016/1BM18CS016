@@ -1,9 +1,11 @@
+
 #include<stdio.h>
 #include<conio.h>
-int stack[100],top=-1;
+int stack[100];
+int top=-1;
 void push(int ele);
-void display();
 int pop();
+void display();
 int main()
 {
 	int e;
@@ -12,40 +14,43 @@ int main()
 	push(3);
 	display();
 	e=pop();
-	printf("Popped element is %d\n",e);
+	if(e!=-9999)
+	{
+	printf("popped ele is %d\n",e);
+	}
 	display();
+	getch();
 	return 0;
-
 }
 void push(int ele)
 {
 	if(top==99)
 	{
-		printf("stack is full");
+		printf("stack is overflow\n");
 		return;
 	}
-	else
-		stack[++top]=ele;
+	stack[++top]=ele;
 }
 int pop()
 {
 	if(top==-1)
 	{
-		printf("stack is empty");
+		printf("stack is underflow\n");
 		return -9999;
 	}
-	else
-		return stack[top--];
+	return stack[top--];
 }
 void display()
 {
 	int i;
 	if(top==-1)
 	{
-		printf("Stack is empty");
+		printf("stack is empty\n");
 		return;
 	}
-	else
-		for(i=top;i>=0;i--)
-			printf("%d\n",stack[i]);
+	printf("contents of stack is\n");
+	for(i=top;i>=0;i--)
+	{
+	printf("%d\n",stack[i]);
+	}
 }
