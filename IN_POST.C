@@ -1,8 +1,7 @@
-
 #include<stdio.h>
-#include<conio.h>
 #include<string.h>
 #include<ctype.h>
+#include<stdlib.h>
 void push(char item,char s[100],int *t) ;
 char pop(char s[100],int *t);
 int is_operator(char sym);
@@ -13,9 +12,8 @@ int main()
 	char item,temp;
 	int i=0,j=0;
 	int top=-1;
-	clrscr();
 	printf("enter infix expression=\n");
-	gets(infix);
+	scanf("%s",infix);
 	while(infix[i]!='\0')
 	{
 		item=infix[i];
@@ -66,9 +64,7 @@ int main()
 		j++;
 	}
 	postfix[j]='\0';
-	printf("postfix exp is=\n");
-	puts(postfix);
-	getch();
+	printf("postfix exp is=%s\n",postfix);
 	return 0;
 }
 void push(char item,char s[100],int *t)
