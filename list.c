@@ -136,6 +136,44 @@ void display(NODE head)
 		p=p->next;
 	}
 }
+Enter 1 to inser at the front,2 to insert at a given position,3 to insert at the end,4 to display
+
+1
+Enter the element
+34
+Enter 1 to inser at the front,2 to insert at a given position,3 to insert at the end,4 to display
+3
+Enter the element
+56
+Enter 1 to inser at the front,2 to insert at a given position,3 to insert at the end,4 to display
+4
+Contents of the list
+34
+56
+Enter 1 to inser at the front,2 to insert at a given position,3 to insert at the end,4 to display
+2
+Enter the position and element to insert the element
+1
+44
+Enter 1 to inser at the front,2 to insert at a given position,3 to insert at the end,4 to display
+4
+Contents of the list
+44
+34
+56
+Enter 1 to inser at the front,2 to insert at a given position,3 to insert at the end,4 to display
+2
+Enter the position and element to insert the element
+4
+77
+Enter 1 to inser at the front,2 to insert at a given position,3 to insert at the end,4 to display
+4
+Contents of the list
+44
+34
+56
+77
+
 			
 		
 		
