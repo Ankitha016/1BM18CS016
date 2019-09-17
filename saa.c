@@ -36,3 +36,13 @@ int main()
 	display(n,bt);
 	return 0;
 }	
+enter the no.of process
+3
+enter the burst time of each process
+2
+3
+5
+process 1 starts at 0th and ends at 2 th second 
+process 2 starts at 2 th and ends at 5 th second 
+process 3 starts at 5 th and ends at 10 th second 
+
