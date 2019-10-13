@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-int pop(int s[100],int *t);
 void display(int s[100],int t);
 void push(int ele,int s[100],int *t);
 int rem(int st1[100],int st2[100],int st3[100],int n1,int n2,int n3,int sum1,int sum2,int sum3);
@@ -44,10 +43,7 @@ int main()
 			break;
 		case 6 :display(stack3,top3);
 			break;
-		case 7:e=pop(stack1,&top1);
-		if(e!=-9999)
-		printf("popped ele is %d\n",e);
-		break;
+	
 		case 8:d=rem(stack1,stack2,stack3,n1,n2,n3,sum1,sum2,sum3);
 				printf("%f",d);
 			break;
@@ -87,21 +83,7 @@ void display(int s[100],int t)
 	}
 	
 }
-int pop(int s[100],int *t)
-{
-	int ele;
-	if(*t==-1)
-	{
-		printf("Stack underflow\n");
-		return -9999;
-	}
-	else
-	{
-		ele=s[*t];
-		*t=*t-1;
-		return ele;
-	}
-}
+
 
 int rem(int st1[100],int st2[100],int st3[100],int n1,int n2,int n3,int sum1,int sum2,int sum3)
 {
