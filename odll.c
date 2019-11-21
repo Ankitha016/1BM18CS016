@@ -8,6 +8,7 @@ struct node
 };
 typedef struct node *NODE;
 void display(NODE head);
+NODE reverse(NODE head);
 NODE odd(NODE head);
 NODE getnode();
 NODE rotate(NODE head, int k); 
@@ -52,6 +53,9 @@ int main()
 		case 6:printf("enter the number of nodes by which list has to be rotated=\n");
 			scanf("%d",&k);
 			head=rotate(head,k); 
+			break;
+		case 7:head=reverse(head);
+			break; 
 		
 	}
 	printf("again enter choice=\n");
@@ -225,6 +229,7 @@ NODE delete_pos(NODE head,int pos)
 		}
 	}
 }
+
 NODE rotate(NODE head, int k) 
 { 
 	
@@ -271,4 +276,24 @@ NODE rotate(NODE head, int k)
 	return head;
 } 
 		
-
+NODE reverse(NODE head) 
+{ 
+     NODE p= NULL;   
+     NODE current = head; 
+       
+     /* swap next and prev for all nodes of  
+       doubly linked list */
+     while (current !=  NULL) 
+     { 
+       p = current->prev; 
+       current->prev = current->next; 
+       current->next = p;               
+       current = current->prev; 
+     }       
+       
+     /* Before changing head, check for the cases like empty  
+        list and list with only one node */
+     if(p != NULL ) 
+        head = p->prev; 
+return head;
+}
